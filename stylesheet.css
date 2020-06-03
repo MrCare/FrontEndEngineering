@@ -1,0 +1,98 @@
+img, form, div{
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    transition: all 1s;
+}
+
+#rectangular, #rectangular:hover{
+    width: 200px;
+    height: 50px;
+    padding: 30px;
+    font-size: 30px;
+    background: darkcyan;
+    border-radius: 20px;
+    position: relative;
+}
+
+#rectangular::after{ 
+    content: '';
+    display: inline-block;
+    width: 0px;
+    border-top: 20px solid transparent ;
+    border-right: 0px solid transparent;
+    border-left: 40px solid darkcyan;
+    border-bottom: 20px solid transparent;
+    position: absolute;
+    top: 30px;
+    right: -40px;
+} 
+
+#rectangular:hover{
+    background-color: chocolate;
+}
+
+.gray{
+    -webkit-filter: grayscale(1);
+}
+
+.gray:hover{
+    -webkit-filter: grayscale(0);
+}
+
+.light{
+    -webkit-filter: brightness(0);
+}
+
+.light:hover{
+    -webkit-filter: brightness(1);
+}
+
+.sepia{
+    -webkit-filter: sepia(1);
+}
+
+.sepia:hover{
+    -webkit-filter: sepia(0);
+}
+
+.blur{
+    -webkit-filter: blur(4px);
+}
+
+.blur:hover{
+    -webkit-filter: blur(1px);
+}
+
+.contrast{
+    -webkit-filter: contrast(10);
+}
+
+.contrast:hover{
+    -webkit-filter: contrast(0);
+}
+
+.saturate{
+    -webkit-filter: saturate(2);
+}
+
+.saturate:hover{
+    -webkit-filter: saturate(0);
+}
+
+.invert{
+    -webkit-filter: invert(1);
+}
+
+.invert:hover{
+    -webkit-filter: invert(0);
+}
+
+.hue-rotate{
+    -webkit-filter: hue-rotate(90deg);
+}
+
+.hue-rotate:hover{
+    -webkit-filter: hue-rotate(0deg);
+}
