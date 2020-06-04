@@ -2,97 +2,196 @@ img, form, div{
     width: 200px;
     height: auto;
     display: block;
-    margin: 0 auto;
+    margin: 10px auto;
     transition: all 1s;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 0 5px black;
+}
+
+img{
+    transform: rotate(30deg);
+}
+
+#threeD, #threeD:hover{
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: normal;
+    color: black;
+    box-shadow: none;
+    
+    animation: fling 2s infinite alternate;
+}
+
+@keyframes fling{
+    from{
+        text-shadow: 1px 1px 5px black;
+    }
+    to{
+        text-shadow: 0px 0px 0px black;
+    }
+}
+
+#threeD:hover{
+    text-shadow: 0px 0px 0px transparent;
+}
+
+form{
+    width: 210px;
+    line-height: 30px;
+}
+
+input{
+    border: none;
+    height: auto;
+    width: auto;
+    display: inline-block;
+    background-color: transparent;
+}
+
+#search{
+    height:20px;
+    background-color: teal;
+    border-radius: 5px;
+    box-shadow:2px 2px 5px black;
+    color: white;
+    margin-bottom: 5px;
 }
 
 #rectangular, #rectangular:hover{
-    width: 200px;
-    height: 50px;
-    padding: 30px;
-    font-size: 30px;
-    background: darkcyan;
-    border-radius: 20px;
+    height: 80px;
+    background: black;
+    border-radius: 10px;
     position: relative;
+    line-height: 80px;
 }
 
 #rectangular::after{ 
     content: '';
     display: inline-block;
     width: 0px;
-    border-top: 20px solid transparent ;
+    height: 0px;
+    border-top: 10px solid transparent ;
     border-right: 0px solid transparent;
-    border-left: 40px solid darkcyan;
-    border-bottom: 20px solid transparent;
-    position: absolute;
-    top: 30px;
-    right: -40px;
+    border-left: 20px solid black;
+    border-bottom: 10px solid transparent;
 } 
 
 #rectangular:hover{
-    background-color: chocolate;
+    background-color: crimson;
 }
 
 .gray{
-    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
 }
 
 .gray:hover{
-    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
 }
 
 .light{
-    -webkit-filter: brightness(0);
+    filter: brightness(0);
 }
 
 .light:hover{
-    -webkit-filter: brightness(1);
+    filter: brightness(1);
+}
+
+body{
+    perspective: 5000px;
+}
+
+.cubic{
+    height: 150px;
+    position: relative;
+    transform-style: preserve-3d;
+    box-shadow: none;
+    text-align: center;
+    transition: transform 10s;
+}
+
+.cubic:hover{
+    transform: rotate3d(1, 1, 1, 720deg);
+}
+
+.page{
+    height: 100px;
+    width:100px;
+    position: absolute;
+    top: 0;
+    left: 50px;
+    opacity: 0.7;
+    border-radius: 0;
+}
+
+.front{
+    transform: translateZ(55px);
+}
+
+.back{
+    transform: translateZ(-55px);
+}
+
+.left{
+    transform: rotateY(-90deg) translateZ(55px);
+}
+
+.right{
+    transform: rotateY(90deg) translateZ(55px);
+}
+
+.top{
+    transform: rotateX(90deg) translateZ(55px);
+}
+
+.bottom{
+    transform: rotateX(-90deg) translateZ(55px);
 }
 
 .sepia{
-    -webkit-filter: sepia(1);
+    filter: sepia(1);
 }
 
 .sepia:hover{
-    -webkit-filter: sepia(0);
+    filter: sepia(0);
 }
 
 .blur{
-    -webkit-filter: blur(4px);
+    filter: blur(4px);
 }
 
 .blur:hover{
-    -webkit-filter: blur(1px);
+    filter: blur(1px);
 }
 
 .contrast{
-    -webkit-filter: contrast(10);
+    filter: contrast(10);
 }
 
 .contrast:hover{
-    -webkit-filter: contrast(0);
+    filter: contrast(0);
 }
 
 .saturate{
-    -webkit-filter: saturate(2);
+    filter: saturate(2);
 }
 
 .saturate:hover{
-    -webkit-filter: saturate(0);
+    filter: saturate(0);
 }
 
 .invert{
-    -webkit-filter: invert(1);
+    filter: invert(1);
 }
 
 .invert:hover{
-    -webkit-filter: invert(0);
+    filter: invert(0);
 }
 
 .hue-rotate{
-    -webkit-filter: hue-rotate(90deg);
+    filter: hue-rotate(90deg);
 }
 
 .hue-rotate:hover{
-    -webkit-filter: hue-rotate(0deg);
+    filter: hue-rotate(0deg);
 }
