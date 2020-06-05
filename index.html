@@ -9,7 +9,8 @@
         <title>测试页面</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="stylesheet.css">
+        <link rel="stylesheet" href="./css/stylesheet.css">
+        <link rel="stylesheet" href="./css/cubic.css">
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -19,15 +20,33 @@
             <input type="text" name="q" placeholder="请输入搜索内容"><input id="search" type="submit" value="搜索">
         </form>
 
-        <div id="threeD">2015.7.23</div>
-
-        <div class="cubic">
+        <div id="threeD">2020.6.5 <br> I Can Go Through This, just think about Mountain</div>
+        
+        <input type="radio" id='btnFront' class="btn" name="rotate" hidden="hidden"></button>
+        <input type="radio" id='btnBack' class="btn" name="rotate" hidden="hidden"></button>
+        <input type="radio" id='btnLeft' class="btn" name="rotate" hidden="hidden"></button>
+        <input type="radio" id='btnRight' class="btn" name="rotate" hidden="hidden"></button>
+        <input type="radio" id='btnTop' class="btn" name="rotate" hidden="hidden"></button>
+        <input type="radio" id='btnBottom' class="btn" name="rotate" hidden="hidden"></button>
+        <input type="radio" id='btnBig' class="btn" name="rotate" hidden="hidden"></button>
+        <input type="radio" id='btnSmall' class="btn" name="rotate" hidden="hidden"></button>
+        <div id="cubicContainer" class="cubic">
             <img class="sepia page front" src="./img/baobao.JPG" alt="baobao">
             <img class="blur page back" src="./img/baobao.JPG" alt="baobao">
             <img class="contrast page left" src="./img/baobao.JPG" alt="baobao">
             <img class="saturate page right" src="./img/baobao.JPG" alt="baobao">
             <img class="invert page top" src="./img/baobao.JPG" alt="baobao">
             <img class="hue-rotate page bottom" src="./img/baobao.JPG" alt="baobao">
+        </div>
+        <div id="container">
+            <label for="btnFront"></label>
+            <label for="btnBack"></label>
+            <label for="btnLeft"></label>
+            <label for="btnRight"></label>
+            <label for="btnTop"></label>
+            <label for="btnBottom"></label>
+            <label for="btnBig"></label>
+            <label for="btnSmall"></label>
         </div>
         <img class="gray" src="./img/baobao.JPG" alt="baobao">
         <img class="light" src="./img/baobao.JPG" alt="baobao">

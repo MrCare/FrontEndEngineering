@@ -1,0 +1,103 @@
+
+body{
+    perspective: 5000px;
+}
+
+#container{
+    margin: 0 auto;
+    width: 200px;
+    height: 90px;
+    text-align: center;
+    line-height: 90px;
+    box-shadow: none;
+}
+
+.cubic{
+    margin: 0 auto;
+    height: 100px;
+    width: 100px;
+    position: relative;
+    transform-style: preserve-3d;
+    box-shadow: none;
+    text-align: center;
+    transition: transform 10s;
+}
+
+.cubic:hover{
+    transform: rotate3d(1, 1, 1, 720deg);
+}
+
+.page{
+    height: 100px;
+    width:100px;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    opacity: 0.7;
+    border-radius: 0;
+}
+
+.front{
+    transform: translateZ(55px);
+}
+
+.back{
+    transform: translateZ(-55px);
+}
+
+.left{
+    transform: rotateY(-90deg) translateZ(55px);
+}
+
+.right{
+    transform: rotateY(90deg) translateZ(55px);
+}
+
+.top{
+    transform: rotateX(90deg) translateZ(55px);
+}
+
+.bottom{
+    transform: rotateX(-90deg) translateZ(55px);
+}
+
+label{
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    box-shadow:0 0 5px black;
+    border-radius: 3px;
+}
+
+label:hover{
+    background: gray;
+    box-shadow: none;
+}
+
+.btn:checked~.cubic{
+    transition: all 1s;
+}
+#btnFront:checked ~ .cubic{
+    transform: rotate3d(0,0,0,0deg);
+}
+#btnBack:checked ~ .cubic{
+    transform: rotate3d(0,1,0,180deg);
+}
+#btnLeft:checked ~ .cubic{
+    transform: rotate3d(0,1,0,90deg);
+}
+#btnRight:checked ~ .cubic{
+    transform: rotate3d(0,1,0,-90deg);
+}
+#btnTop:checked ~ .cubic{
+    transform: rotate3d(1,0,0,-90deg);
+}
+#btnBottom:checked ~ .cubic{
+    transform: rotate3d(1,0,0,90deg);
+}
+#btnBig:checked ~ .cubic{
+    transform: scale(1.5);
+}
+#btnSmall:checked ~ .cubic{
+    transform: scale(0.5);
+}
